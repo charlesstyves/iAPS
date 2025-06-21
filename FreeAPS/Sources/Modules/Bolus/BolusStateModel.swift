@@ -167,7 +167,8 @@ extension Bolus {
             }
 
             // more or less insulin because of bg trend in the last 15 minutes
-            fifteenMinInsulin = isf == 0 ? 0 : (deltaBG * conversion) / isf
+            // fifteenMinInsulin = isf == 0 ? 0 : (deltaBG * conversion) / isf
+            fifteenMinInsulin = 0
             print("fifteenMinInsulin isf: \(isf), deltaBG: \(deltaBG * conversion)")
 
             // determine whole COB for which we want to dose insulin for and then determine insulin for wholeCOB
