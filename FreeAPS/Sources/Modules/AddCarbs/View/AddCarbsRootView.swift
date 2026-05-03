@@ -240,15 +240,15 @@ extension AddCarbs {
                     }
                 }
 
-                if !empty, !saved {
-                    Button { saveAsPreset() }
-                    label: {
-                        Text("Save as preset").foregroundStyle(.orange)
-                    }
-                    .buttonStyle(.borderless)
-                    .listRowBackground(Color(.systemGroupedBackground))
-                    .frame(maxWidth: .infinity, alignment: .trailing)
-                }
+                // if !empty, !saved {
+                //    Button { saveAsPreset() }
+                //    label: {
+                //        Text("Save as preset").foregroundStyle(.orange)
+                //    }
+                //    .buttonStyle(.borderless)
+                //    .listRowBackground(Color(.systemGroupedBackground))
+                //    .frame(maxWidth: .infinity, alignment: .trailing)
+                // }
 
                 // Optional Hypo Treatment
                 if state.carbs > 0, let profile = state.id, profile != "None", state.carbsRequired != nil {
