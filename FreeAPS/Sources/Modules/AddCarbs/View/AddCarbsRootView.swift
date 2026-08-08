@@ -1105,16 +1105,20 @@ extension AddCarbs {
                         Spacer()
                         DecimalTextField("0", value: $newPreset.carbs, formatter: Self.formatter, liveEditing: true)
                     }
-                    HStack {
-                        Text("Fat").foregroundStyle(.secondary)
-                        Spacer()
-                        DecimalTextField("0", value: $newPreset.fat, formatter: Self.formatter, liveEditing: true)
+                    
+                    if state.useFPUconversion {
+                        HStack {
+                            Text("Fat").foregroundStyle(.secondary)
+                            Spacer()
+                            DecimalTextField("0", value: $newPreset.fat, formatter: Self.formatter, liveEditing: true)
+                        }
+                        HStack {
+                            Text("Protein").foregroundStyle(.secondary)
+                            Spacer()
+                            DecimalTextField("0", value: $newPreset.protein, formatter: Self.formatter, liveEditing: true)
+                        }
                     }
-                    HStack {
-                        Text("Protein").foregroundStyle(.secondary)
-                        Spacer()
-                        DecimalTextField("0", value: $newPreset.protein, formatter: Self.formatter, liveEditing: true)
-                    }
+                    
                 } header: { Text("Saved Food") }
 
                 Section {
