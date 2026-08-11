@@ -82,7 +82,7 @@ extension OverrideProfilesConfig {
 
         var body: some View {
             overridesView
-                .navigationBarTitle("Profiles")
+                .navigationBarTitle("Overrides")
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarItems(trailing: Button("Close", action: state.hideModal))
                 .dynamicTypeSize(...DynamicTypeSize.xxLarge)
