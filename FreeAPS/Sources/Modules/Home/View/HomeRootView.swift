@@ -229,12 +229,24 @@ extension Home {
                 .padding(.leading, 8)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
-                if let tempTargetString = tempTargetString, !(fetchedPercent.first?.enabled ?? false) {
-                    Text(tempTargetString)
-                        .font(.buttonFont)
-                        .foregroundColor(.secondary)
-                } else {
+		        let isOverrideActive = fetchedPercent.first?.enabled ?? false
+
+                HStack(spacing: 0) {
+                    
                     profileView
+                    .foregroundColor(.secondary)
+    
+                    if isOverrideActive, tempTargetString != nil {
+                        Text(" | ")
+                        .font(.statusFont)
+                        .foregroundColor(.secondary)
+                    }
+
+                    if let tempTargetString = tempTargetString {
+                        Text(tempTargetString)
+                        .font(.statusFont)
+                        .foregroundColor(.secondary)
+                    }
                 }
 
                 ZStack {
