@@ -104,8 +104,8 @@ extension AddCarbs {
 
         @ViewBuilder private var content: some View {
             VStack(spacing: 0) {
-                FoodSearchBar(rootState: state, state: foodSearchState)
-                    .padding(.horizontal)
+//                FoodSearchBar(rootState: state, state: foodSearchState)
+//                    .padding(.horizontal)
 
                 if foodSearchState.showingFoodSearch {
                     foodSearchView
@@ -224,17 +224,17 @@ extension AddCarbs {
                         autofocus: true
                     )
 
-                    macroRow(
-                        title: "Fat",
-                        value: $state.fat,
-                        color: .blue
-                    )
+//                    macroRow(
+//                      title: "Fat",
+//                        value: $state.fat,
+//                        color: .blue
+//                    )
 
-                    macroRow(
-                        title: "Protein",
-                        value: $state.protein,
-                        color: .green
-                    )
+//                    macroRow(
+//                        title: "Protein",
+//                        value: $state.protein,
+//                        color: .green
+//                    )
 
                     if state.mealViewMicronutrients {
                         otherNutritionButton
@@ -244,7 +244,7 @@ extension AddCarbs {
                 }
 
                 if !empty, !saved {
-                    savePresetButton
+//                    savePresetButton
                 }
 
                 if state.carbs > 0,
