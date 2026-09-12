@@ -204,7 +204,7 @@ extension Bolus {
 
             // apply custom factor if fatty meal toggle in bolus calc config settings is on and the box for fatty meals is checked (in RootView)
             if useFattyMealCorrectionFactor {
-                insulinCalculated = result * fattyMealFactor
+                insulinCalculated = result - (wholeCobInsulin * fraction * (1 - fattyMealFactor))
             } else {
                 insulinCalculated = result
             }
