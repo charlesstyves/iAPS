@@ -39,12 +39,12 @@ extension AddTempTarget {
                     }
                 }
 
-                HStack {
-                    Text("Experimental")
-                    Toggle(isOn: $state.viewPercantage) {}.controlSize(.mini)
-                    Image(systemName: "figure.highintensity.intervaltraining")
-                    Image(systemName: "fork.knife")
-                }
+//                HStack {
+//                    Text("Experimental")
+//                    Toggle(isOn: $state.viewPercantage) {}.controlSize(.mini)
+//                    Image(systemName: "figure.highintensity.intervaltraining")
+//                    Image(systemName: "fork.knife")
+//                }
 
                 if state.viewPercantage {
                     Section {
@@ -145,7 +145,7 @@ extension AddTempTarget {
             .onAppear {
                 state.hbt = isEnabledArray.first?.hbt ?? 160
             }
-            .navigationTitle("Enact Temp Target")
+            .navigationTitle("Temp Targets")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing: Button("Close", action: state.hideModal))
         }
