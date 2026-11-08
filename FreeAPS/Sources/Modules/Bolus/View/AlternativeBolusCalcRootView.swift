@@ -127,7 +127,7 @@ extension Bolus {
                             if state.fattyMeals {
                                 Spacer()
                                 Toggle(isOn: $state.useFattyMealCorrectionFactor) {
-                                    Text("Fatty Meal")
+                                    Text("Reduced bolus")
                                 }
                                 .toggleStyle(CheckboxToggleStyle())
                                 .font(.footnote)
