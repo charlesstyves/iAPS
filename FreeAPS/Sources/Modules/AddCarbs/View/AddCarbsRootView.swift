@@ -104,8 +104,8 @@ extension AddCarbs {
 
         @ViewBuilder private var content: some View {
             VStack(spacing: 0) {
-                FoodSearchBar(rootState: state, state: foodSearchState)
-                    .padding(.horizontal)
+//                FoodSearchBar(rootState: state, state: foodSearchState)
+//                    .padding(.horizontal)
 
                 if foodSearchState.showingFoodSearch {
                     foodSearchView
@@ -246,7 +246,7 @@ extension AddCarbs {
                 }
 
                 if !empty, !saved {
-                    savePresetButton
+//                    savePresetButton
                 }
 
                 if state.carbs > 0,
