@@ -16,25 +16,23 @@ struct GlassEffectWhenAvailable: ViewModifier {
     }
 }
 
-/*
- @available(iOS 27.1, *) struct ToolbarEdgeAwareButton<Icon: View>: View {
-     @Environment(\.toolbarVerticalEdge) private var toolbarVerticalEdge
+@available(iOS 27.1, *) struct ToolbarEdgeAwareButton<Icon: View>: View {
+    @Environment(\.toolbarVerticalEdge) private var toolbarVerticalEdge
 
-     let action: () -> Void
-     @ViewBuilder let icon: () -> Icon
+    let action: () -> Void
+    @ViewBuilder let icon: () -> Icon
 
-     var body: some View {
-         Button(action: action) {
-             icon()
-                 .frame(
-                     width: toolbarVerticalEdge == nil ? 28 : 30,
-                     height: toolbarVerticalEdge == nil ? 28 : 30
-                 )
-         }
-         .labelStyle(.iconOnly)
-     }
- }
-  */
+    var body: some View {
+        Button(action: action) {
+            icon()
+                .frame(
+                    width: toolbarVerticalEdge == nil ? 28 : 30,
+                    height: toolbarVerticalEdge == nil ? 28 : 30
+                )
+        }
+        .labelStyle(.iconOnly)
+    }
+}
 
 struct BoolTag: ViewModifier {
     let bool: Bool
@@ -383,8 +381,7 @@ extension Shape {
             glassEffect(glass, in: self)
         } else {
             background {
-                fill(.ultraThinMaterial)
-                Color.clear
+                fill(.ultraThickMaterial.opacity(0.7))
             }
         }
     }
@@ -422,7 +419,7 @@ extension View {
             glassEffect(glass, in: shape)
         } else {
             background {
-                shape.fill(.ultraThinMaterial)
+                shape.fill(.ultraThickMaterial.opacity(0.7))
             }
         }
     }
